@@ -1,0 +1,12 @@
+{
+  "terminal.integrated.fontSize": 20,
+  "window.zoomLevel": 2,
+  "editor.fontSize": 20,
+  "files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "jinja-html"
+  },
+  "emmet.includeLanguages": {
+    "jinja-html": "html"
+  }
+}
