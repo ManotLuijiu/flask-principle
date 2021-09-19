@@ -8,5 +8,8 @@
   },
   "emmet.includeLanguages": {
     "jinja-html": "html"
-  }
+  },
+  "python.pythonPath": "/Users/manotlj/Anaconda/anaconda3/bin/python",
+  "python.condaPath": "/Users/manotlj/Anaconda/anaconda3/bin/python",
+  "python.defaultInterpreterPath": "/Users/manotlj/Anaconda/anaconda3/bin/python"
 }

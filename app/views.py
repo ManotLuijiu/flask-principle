@@ -12,5 +12,9 @@ def hello_world():
 
 @app.route('/gen-template')
 def gen_template():
-    return render_template('index.html')
+    return render_template('index.html', name="Flask")
+
+@app.route('/profile')
+def profile():
+    return render_template('profile.html')
 

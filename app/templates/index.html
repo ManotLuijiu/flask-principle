@@ -53,24 +53,23 @@
   <body>
     <container>
       <div>
+        {% block content %}
+
         <h1>This page generated with render_template</h1>
         <h2>Statements</h2>
-        {% if my_variable %}
+        {% if name %}
         <p>
-          This paragraph won't be displayed in the template because the variable
-          "my_variable" does not exist. The if statement therefore returns
-          False.
+          This paragraph will be displayed in the template because the variable
+          "name" exist. The if statement therefore returns True.
         </p>
         {% else %}
-        <p>This paragraph will be displayed.</p>
+        <p>This paragraph will not be displayed.</p>
         {% endif %}
 
         <h2>Variables</h2>
 
-        <p>{{ my_variable }}</p>
-        <p>
-          The variable above will not be displayed because it doesn't exist!
-        </p>
+        <p>Variable name contain: {{ name }}</p>
+        <p>The variable above will be displayed because it exist!</p>
 
         <h2>Comments</h2>
 
@@ -82,6 +81,8 @@
           syntax.
         </p>
         {% endif %} #}
+        <h3>This is block content in Jinja2</h3>
+        {% endblock %}
       </div>
       <div id="new"></div>
     </container>
