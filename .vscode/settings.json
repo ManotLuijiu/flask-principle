@@ -1,7 +1,7 @@
 {
-  "terminal.integrated.fontSize": 20,
-  "window.zoomLevel": 2,
-  "editor.fontSize": 20,
+  "terminal.integrated.fontSize": 16,
+  "window.zoomLevel": 0,
+  "editor.fontSize": 16,
   "files.associations": {
     "**/*.html": "html",
     "**/templates/**/*.html": "jinja-html"

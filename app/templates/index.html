@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {# get your own code from realfavicongenerator.net #}
+    <meta name="apple-mobile-web-app-title" content="MeansBiz" />
+    <meta name="application-name" content="MeansBiz" />
+    <meta name="msapplication-TileColor" content="#0984e3" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{url_for('static', filename='apple-touch-icon.png')}}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{url_for('static', filename='favicon-32x32.png')}}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{url_for('static', filename='favicon-16x16.png')}}"
+    />
+    <link
+      rel="manifest"
+      href="{{url_for('static', filename='site.webmanifest')}}"
+    />
+    <link
+      rel="mask-icon"
+      href="{{url_for('static', filename='safari-pinned-tab.svg')}}"
+      color="#0984e3"
+    />
+    {# end realfavicongenerator #}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css')}}"
+    />
+
+    <title>Gen-Template</title>
+  </head>
+  <body>
+    <container>
+      <div>
+        <h1>This page generated with render_template</h1>
+        <h2>Statements</h2>
+        {% if my_variable %}
+        <p>
+          This paragraph won't be displayed in the template because the variable
+          "my_variable" does not exist. The if statement therefore returns
+          False.
+        </p>
+        {% else %}
+        <p>This paragraph will be displayed.</p>
+        {% endif %}
+
+        <h2>Variables</h2>
+
+        <p>{{ my_variable }}</p>
+        <p>
+          The variable above will not be displayed because it doesn't exist!
+        </p>
+
+        <h2>Comments</h2>
+
+        {% if True %}
+        <p>This will be displayed because the if statement returns True.</p>
+        {% endif %} {# {% if True %}
+        <p>
+          This will not be displayed because it is commented out using Jinja2
+          syntax.
+        </p>
+        {% endif %} #}
+      </div>
+      <div id="new"></div>
+    </container>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='index.js')}}"
+    ></script>
+  </body>
+</html>
